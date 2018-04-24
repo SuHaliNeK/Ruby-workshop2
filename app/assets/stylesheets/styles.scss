@@ -1,0 +1,98 @@
+:root {
+  --height: 40px;
+  --button-radius: 5px;
+
+  --accent: #3f51b5;
+  --main: white;
+  --text: #333;
+}
+
+.button {
+  background-color: pink;
+  text-decoration: none;
+  padding:0 10px;
+  border-radius: 10px;
+  color: red;
+  line-height: var(--height);
+  height: var(--height);
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: background-color .1s ease-in-out;
+  transition:color .1s ease-in-out;
+}
+.button:visited{
+  color: red;
+}
+
+.button:hover {
+  background-color: purple;
+  color: pink;
+  transform: scale(1.1,1.1);
+}
+
+.button:active {
+  transform: translateY(3px);
+}
+
+.button--secondary {
+  /* wpisz odpowiednie style */
+}
+
+.heading {
+  /* wpisz odpowiednie style */
+}
+
+.panel {
+  width:  fit-content;
+  width:  -moz-fit-content;
+  background-color: lightblue;
+  padding: 1em; 
+  border-radius: 20px;
+}
+.panel + .panel {
+  margin-top: 20px;
+}
+.panel__list {
+  list-style: none;
+  padding: 5px;
+  flex-direction: column;
+
+  display:flex;
+}
+
+.panel__item + .panel__item {
+  margin:5px 0 0 0;
+
+}
+
+.panel__title {
+  margin:0;
+}
+
+.panel__text {
+  margin:0;
+}
+.panel__actions {
+  /* wpisz odpowiednie style */
+}
+
+.panel__action + .panel__action {
+  margin-left: 30px;
+}
+
+@media (min-width: 820px) {
+  .panel__list,
+  .panel__actions {
+  flex-direction: row;  
+}
+
+  .panel__item + .panel__item {
+  margin-left: 5px;
+
+}
+
+  .panel__action + .panel__action {
+   /* wpisz odpowiednie style */
+  }
+}
